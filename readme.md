@@ -17,14 +17,14 @@ x-ui-pro is an open-source project that provides an auto-installation script for
 **Install XUI-PRO**:dvd::package:
 
 ```
-sudo su -c "$(command -v apt||echo dnf) -y install wget;bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -panel 1 -xuiver last -cdn off -secure no -country xx"
+sudo su -c "$(command -v apt||echo dnf) -y install wget;bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -panel 1 -xuiver last -cdn off -secure no -country xx"
 ```
 
 <details><summary>:point_right:Cloudflare users :arrow_heading_down:</summary>
  
  ##
  
-**<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/cdnon.png" width="34">(-cdn on ) Access is only possible from the CDN IP.**
+**<img src="https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/cdnon.png" width="34">(-cdn on ) Access is only possible from the CDN IP.**
 
 **🌍(-country cn,ru,us,de) Only connections from these countries are allowed. [xx = all]**
 
@@ -37,32 +37,32 @@ sudo su -c "$(command -v apt||echo dnf) -y install wget;bash <(wget -qO- raw.git
 
 **Random FakeSite**:earth_asia:	
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -RandomTemplate yes
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -RandomTemplate yes
 ```
 
 **Uninstall X-UI-PRO**:x:
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -Uninstall yes
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -Uninstall yes
 ```
 
-**Enable Psiphon in WARP+(Custom Country) <img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/cdnon.png" width="34">+<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/psiphon.gif" width="15">**
+**Enable Psiphon in WARP+(Custom Country) <img src="https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/cdnon.png" width="34">+<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/psiphon.gif" width="15">**
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -WarpCfonCountry US
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -WarpCfonCountry US
 ```
 
 **Enable Psiphon in WARP+(Random Country)🌐🎲**
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -WarpCfonCountry XX
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -WarpCfonCountry XX
 ```
 
 **Tor Custom Country🧅🌍**
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -TorCountry US
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -TorCountry US
 ```
 
 **Tor Random Country 🧅🎲**
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -TorCountry XX
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -TorCountry XX
 ```
 
 **Valid🚩Country🌍🆔**
@@ -70,14 +70,14 @@ bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) 
 AT BE BG BR CA CH CZ DE DK EE ES FI FR GB HR HU IE IN IT JP LV NL NO PL PT RO RS SE SG SK UA US
 ```
 
-**Add LicenseKey to WARP<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/cdnon.png" width="34">🔑**
+**Add LicenseKey to WARP<img src="https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/cdnon.png" width="34">🔑**
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -WarpCfonCountry XX -WarpLicKey xxxx-xxxx-xxxx
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -WarpCfonCountry XX -WarpLicKey xxxx-xxxx-xxxx
 ```
 
 **Disable WarpPsiphon and WARP CleanKey❌**
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -CleanKeyCfon yes
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -CleanKeyCfon yes
 ```
 
 **Only > Optimize the Network, SSH & System Limits!🚀🔥🛠️**
@@ -87,7 +87,7 @@ bash <(wget -qO- raw.githubusercontent.com/hawshemi/Linux-Optimizer/main/linux-o
 
 **Enable UFW :no_entry_sign: Firewall (Prevent direct access to xui-xray-v2ray ports)**
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -ufw on
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -ufw on
 ```
 **Uninstall V2rayA ❌**
 ```
@@ -115,15 +115,15 @@ To clean or change the phrase "Go-http-client/x" from the xray/v2ray/singbox cor
  
 #### Enable Secure/CDN Mode 
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -panel 1 -xuiver last -cdn on -secure yes -country xx"
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -panel 1 -xuiver last -cdn on -secure yes -country xx"
 ```
 #### Enable UFW Firewall
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -ufw on
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -ufw on
 ```
 #### Random Fake HTML
 ```
-bash <(wget -qO- raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/x-ui-pro.sh) -RandomTemplate yes
+bash <(wget -qO- raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/x-ui-pro.sh) -RandomTemplate yes
 ```
 ####  Bulk Config with Random CDN IP
 ```
@@ -138,23 +138,23 @@ Secure mode works only with [GFW-knocker/Xray-core](https://github.com/GFW-knock
 The above points are highly recommended. Always use port 443 and enable TLS.
 </details>
  
-<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/hr.png" width="100%">
+<img src="https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/hr.png" width="100%">
 
 ### Server Configuration :wrench:🐧⚙️
-![](https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/Config_XUI_ADMIN_4.jpg)
-![](https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/grpc_config_format.jpg)
+![](https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/Config_XUI_ADMIN_4.jpg)
+![](https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/grpc_config_format.jpg)
 ### Client Configuration 👨‍💻📱✏️
-![](https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/XUI_CONFIG_XRAY_CLIENT_EDIT2.png)
-<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/hr.png" width="100%">
+![](https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/XUI_CONFIG_XRAY_CLIENT_EDIT2.png)
+<img src="https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/hr.png" width="100%">
 
-## Enable WARP<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/cdnon.png" width="34"> TOR 🧅 (Fix Google&ChatGPT Forbidden/Hide VPS IP)
+## Enable WARP<img src="https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/cdnon.png" width="34"> TOR 🧅 (Fix Google&ChatGPT Forbidden/Hide VPS IP)
 #### XUI > Xray Configs > Outbounds > Add Outbound ➕💾👇
-![](https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/warptor02.jpg)
+![](https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/warptor02.jpg)
 #### Connect Config(Inbound) to WARP/WARP+/TOR/Psiphon/v2rayA (Outbound): :link:
 #### XUI > Xray Configs > Routing Rules > Add Rule ➕💾👇
-![](https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/warptor3.jpg)
+![](https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/warptor3.jpg)
 #### v2rayA Panel Settings (v2rayA suggested as Outbound and supports the subscription links):⚙️👇
-![](https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/v2rayadminpanel2.jpg)
+![](https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/v2rayadminpanel2.jpg)
 If you forget your password, run "v2raya-reset-password" to reset it (in ssh bash)
 
 v2rayA the configuration directory is: /usr/local/etc/v2raya
@@ -164,7 +164,7 @@ XUI Panel > Panel Setting > Subscription > Enable Service (Don't change /sub/ /j
 XUI Panel > Inbounds > General Actions > Export All URLs - Subscriptions
 
 In the displayed address, change `  :  to  /  ` ✏️
-<img src="https://raw.githubusercontent.com/GFW4Fun/x-ui-pro/master/media/hr.png" width="100%">
+<img src="https://raw.githubusercontent.com/miltoncarpenter665/x-ui-pro/master/media/hr.png" width="100%">
 
 ## Useful Tools :fire: :link:
 [Bulk Config With Random CDN IP Range](https://gfw4fun.github.io/xray_bulk_config_with_random_cdn_ip_range/)
