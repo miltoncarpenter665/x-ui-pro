@@ -266,8 +266,7 @@ if ! systemctl is-active --quiet x-ui || ! command -v x-ui &> /dev/null; then
  	VERSION=$(echo "$VERSION" | tr -d '[:space:]')
 	if [[ -z "$VERSION" || "$VERSION" != *.* ]]; then VERSION="master"
 	else [[ $PNLNUM == "1" ]] && VERSION="v${VERSION#v}" || VERSION="${VERSION#v}" ; fi	
-	PANEL=( "https://raw.githubusercontent.com/alireza0/x-ui/${VERSION}/install.sh"
-	);
+	PANEL=( "https://raw.githubusercontent.com/alireza0/x-ui/${VERSION}/install.sh");
 	[[ "$VERSION" == "master" ]] && VERSION=""
 	printf 'n\n' | bash <(wget -qO- "${PANEL[$PNLNUM]}") "$VERSION" ||  { printf 'n\n' | bash <(curl -Ls "${PANEL[$PNLNUM]}") "$VERSION"; }
 	service_enable "x-ui"
