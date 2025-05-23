@@ -189,10 +189,10 @@ IP6=$(ip route get 2620:fe::fe 2>&1 | grep -Po -- 'src \K\S*')
 [[ $IP4 =~ $IP4_REGEX ]] || IP4=$(curl -s ipv4.icanhazip.com);
 [[ $IP6 =~ $IP6_REGEX ]] || IP6=$(curl -s ipv6.icanhazip.com);
 ##############################Install SSL################################################################
-certbot certonly --standalone --non-interactive --force-renewal --agree-tos --register-unsafely-without-email --cert-name "$MainDomain" -d "$domain"
-if [[ ! -d "/etc/letsencrypt/live/${MainDomain}/" ]]; then
+certbot certonly --standalone --non-interactive --force-renewal --agree-tos --register-unsafely-without-email --cert-name "$domain" -d "$domain"
+if [[ ! -d "/etc/letsencrypt/live/${domain}/" ]]; then
  	systemctl start nginx >/dev/null 2>&1
-	msg_err "$MainDomain SSL failed! Check Domain/IP! Exceeded limit!? Try another domain or VPS!" && exit 1
+	msg_err "$domain SSL failed! Check Domain/IP! Exceeded limit!? Try another domain or VPS!" && exit 1
 fi
 ################################# Access to configs only with cloudflare#################################
 mkdir -p /etc/nginx/sites-{available,enabled} /var/log/nginx /var/www /var/www/html
@@ -300,10 +300,10 @@ if echo "$CountryAllow" | grep -Eq '^[A-Z]{2}(\|[A-Z]{2})*$'; then
 	CLIMIT=$( [[ "$CountryAllow" == "XX" ]] && echo "#" || echo "" )
 fi
 #################################Nginx Config###########################################################
-cat > "/etc/nginx/sites-available/$MainDomain" << EOF
+cat > "/etc/nginx/sites-available/$domain" << EOF
 server {
 	server_tokens off;
-	server_name $MainDomain *.$MainDomain;
+	server_name $domain;
 	listen 80;
 	listen [::]:80;
 	listen 443 ssl${OLD_H2};
@@ -313,11 +313,11 @@ server {
 	root /var/www/html/;
 	ssl_protocols TLSv1.2 TLSv1.3;
 	ssl_ciphers HIGH:!aNULL:!eNULL:!MD5:!DES:!RC4:!ADH:!SSLv3:!EXP:!PSK:!DSS;
-	ssl_certificate /etc/letsencrypt/live/$MainDomain/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/$MainDomain/privkey.pem;
-	if (\$host !~* ^(.+\.)?$MainDomain\$ ){return 444;}
+	ssl_certificate /etc/letsencrypt/live/$domain/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/$domain/privkey.pem;
+	if (\$host !~* ^(.+\.)?$domain\$ ){return 444;}
 	if (\$scheme ~* https) {set \$safe 1;}
-	if (\$ssl_server_name !~* ^(.+\.)?$MainDomain\$ ) {set \$safe "\${safe}0"; }
+	if (\$ssl_server_name !~* ^(.+\.)?$domain\$ ) {set \$safe "\${safe}0"; }
 	if (\$safe = 10){return 444;}
 	if (\$request_uri ~ "(\"|'|\`|~|,|:|--|;|%|\\$|&&|\?\?|0x00|0X00|\||\\|\{|\}|\[|\]|<|>|\.\.\.|\.\.\/|\/\/\/)"){set \$hack 1;}
 	error_page 400 402 403 500 501 502 503 504 =404 /404;
@@ -390,10 +390,10 @@ server {
 	$NOPATH location / { try_files \$uri \$uri/ =404; }
 }
 EOF
-if [[ -f "/etc/nginx/sites-available/$MainDomain" ]]; then
+if [[ -f "/etc/nginx/sites-available/$domain" ]]; then
 	unlink "/etc/nginx/sites-enabled/default" >/dev/null 2>&1
 	rm -f "/etc/nginx/sites-enabled/default" "/etc/nginx/sites-available/default"
-	ln -fs "/etc/nginx/sites-available/$MainDomain" "/etc/nginx/sites-enabled/" 2>/dev/null
+	ln -fs "/etc/nginx/sites-available/$domain" "/etc/nginx/sites-enabled/" 2>/dev/null
 fi
 sudo rm -f /etc/nginx/sites-enabled/*{~,bak,backup,save,swp,tmp}
 ##################################Check Nginx status####################################################
